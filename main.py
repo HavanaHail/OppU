@@ -16,8 +16,9 @@ class MainPage(webapp2.RequestHandler):
 #        self.response.write('Hello, World!')
 class newUser(webapp2.RequestHandler):
     def get(self):
+        data()
         file = models.TinyU.query(models.TinyU).get()
-        print file
+        
 #        self.response.headers['Content-Type'] = 'text/plain'
 
 
