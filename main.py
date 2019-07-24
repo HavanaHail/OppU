@@ -21,12 +21,22 @@ class newUser(webapp2.RequestHandler):
 #        template = jinja_env.get_template('/templates/index.html')
         self.response.headers['Content-Type'] = 'text/html'
 #        self.response.write("HI")
-
-        self.response.write(tinyperson.name)
-        self.response.write(tinyperson.race)
+        name = tinyperson.name
+        age  = tinyperson.age
+        race  = tinyperson.name
+        social_class = tinyperson.name
         user_grade = data.getGrade(tinyperson.age)
-        self.response.write(user_grade)
 
+        template_vars = {
+        "Name": name,
+        "Age": age,
+        "race": race,
+        "Social Class": social_class,
+        "Grade": user_grade
+        }
+
+        start_template=jinja_env.get_template("PageTwo.html")
+        self.response.write(start_template.render(template_vars))
 
 
 

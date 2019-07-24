@@ -11,9 +11,10 @@ class TinyU(ndb.Model):
     social_class =  ndb.StringProperty()
     is_current =  ndb.BooleanProperty()
 # first gen second gen stuff
+
 class lifeEvent():
-shiftkey = ndb.IntegerProperty()
-name =  ndb.StringPropert()
-description = ndb.TextProperty()
-forAge = nbd.IntegerProperty()
-lifeEvents = ndb.StringPropert(repeated = True)
+    shiftkey = ndb.IntegerProperty()
+    name =  ndb.StringProperty()
+    description = ndb.TextProperty()
+    forAge = ndb.IntegerProperty()
+    lifeEvents = ndb.StringProperty(repeated = True)
