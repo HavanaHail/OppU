@@ -25,8 +25,7 @@ def newtinydata():
     return tinyperson
 
 def stats():
-
-
+    Private_school = lifeEvent(shiftkey=1, name ="", description = "", forAge = "", lifeEvent = "")
 #age up button
 #def age():
  #age starts off as 5
