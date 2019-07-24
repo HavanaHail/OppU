@@ -1,7 +1,21 @@
-th {
+.studentTopBox {
   border: 2px solid black;
+  
 }
 
-body {
-  background-color: #fdf4e3;
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  background-color: darkblue;
+}
+
+section {
+  height: 350px;
+}
+
+.border {
+  border: 1px solid black;
+  padding-left: 126px;
+  padding-right: 126px;
 }
