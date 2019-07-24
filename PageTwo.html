@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Your Life Path</title>
     <link rel="stylesheet" type="text/css" href="static/PageTwo.css"></link>
+    <script src="PageTwo.js"></script>
   </head>
   <body>
     <div class="TopBox">
@@ -16,16 +18,26 @@
 
       </section>
       <nav>
-        <div class="border"></div>
-          <a href="">About Student</a>
-        <div class="border"></div>
-          <a href="">About School</a>
-        <div class="border"></div>
-          <a href="">+Age+</a>
-        <div class="border"></div>
-          <a href="">Extracurriculars</a>
-        <div class="border"></div>
-          <a href="">New Life</a>
+        <div class="border popup" button id="myBtn"  onclick="myFunction()">About Student
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+          </div>
+
+                  <div class="border popup" button id="myBtn" class= onclick="myFunction()">About School
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
+
+                  <div class="border popup" button id="myBtn" onclick="myFunction()">+Age+
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
+
+                  <div class="border popup" button id="myBtn" onclick="myFunction()">Extracurriculars
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
+
+                  <div class="border popup" button id="myBtn" onclick="myFunction()">New Life
+        <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
+
       </nav>
       <section class="description">
           {{ Age }}
@@ -33,6 +45,5 @@
           {{ Social_Class }}
       </section>
     </main>
-
   </body>
-</html>
+</html> 
