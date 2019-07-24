@@ -4,47 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Your Life Path</title>
-    <link rel="stylesheet" type="text/css" href="PageTwo.css"></link>
+    <link rel="stylesheet" type="text/css" href="static/PageTwo.css"></link>
     <script src="PageTwo.js"></script>
   </head>
   <body>
     <div class="TopBox">
-      <h1>Student</h1>
-      <h2>Name which will be jinja reference</h2>
-      <h3>Grade</h3>
-
+      <h1>Sprite here</h1>
+      <h1>{{ name }}</h1>
+      <h1>{{ grade }}</h1>
     </div>
     <main>
-      <section class="">
+      <section class="content">
 
       </section>
       <nav>
-        <nav>
+        <div class="border popup" button id="myBtn"  onclick="myFunction()">About Student
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+          </div>
 
+                  <div class="border popup" button id="myBtn" class= onclick="myFunction()">About School
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
 
-          <div class="border popup" button id="myBtn"  onclick="myFunction()">About Student
-    <span class="popuptext" id="myPopup" >A Simple Popup!</span>
-  </div>
+                  <div class="border popup" button id="myBtn" onclick="myFunction()">+Age+
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
 
-          <div class="border popup" button id="myBtn" class= onclick="myFunction()">About School
-    <span class="popuptext" id="myPopup" >A Simple Popup!</span>
-</div>
+                  <div class="border popup" button id="myBtn" onclick="myFunction()">Extracurriculars
+            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
 
-          <div class="border popup" button id="myBtn" onclick="myFunction()">+Age+
-    <span class="popuptext" id="myPopup" >A Simple Popup!</span>
-</div>
-
-          <div class="border popup" button id="myBtn" onclick="myFunction()">Extracurriculars
-    <span class="popuptext" id="myPopup" >A Simple Popup!</span>
-</div>
-
-          <div class="border popup" button id="myBtn" onclick="myFunction()">New Life
-<span class="popuptext" id="myPopup" >A Simple Popup!</span>
-</div>
-
-
+                  <div class="border popup" button id="myBtn" onclick="myFunction()">New Life
+        <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
 
       </nav>
+      <section class="description">
+          {{ age }}
+          {{ race }}
+          {{ socialclass }}
+      </section>
     </main>
   </body>
-</html>
+</html> 
