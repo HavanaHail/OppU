@@ -8,22 +8,29 @@
   <body>
     <div class="TopBox">
       <h1>Sprite here</h1>
-      <h1>Name which will be jinja reference</h1>
-      <h1>Grade</h1>
+      <h1>{{ name }}</h1>
+      <h1>{{ grade }}</h1>
     </div>
     <main>
       <section class="content">
 
       </section>
       <nav>
-        <div class="border">About Student</div>
-        <div class="border">About School</div>
-        <div class="border">+Age+</div>
-        <div class="border">Extracurriculars</div>
-        <div class="border">New Life</div>
+        <div class="border"></div>
+          <a href="">About Student</a>
+        <div class="border"></div>
+          <a href="">About School</a>
+        <div class="border"></div>
+          <a href="">+Age+</a>
+        <div class="border"></div>
+          <a href="">Extracurriculars</a>
+        <div class="border"></div>
+          <a href="">New Life</a>
       </nav>
       <section class="description">
-
+          {{ age }}
+          {{ race }}
+          {{ socialclass }}
       </section>
     </main>
 
