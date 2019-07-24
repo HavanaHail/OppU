@@ -31,7 +31,7 @@ class newUser(webapp2.RequestHandler):
         "Name": name,
         "Age": age,
         "race": race,
-        "Social Class": social_class,
+        "Social_Class": social_class,
         "Grade": user_grade
         }
 
