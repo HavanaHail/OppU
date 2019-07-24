@@ -2,7 +2,6 @@ import webapp2
 import os
 import jinja2
 from data import newtinydata
-from models import TinyU
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -17,15 +16,10 @@ class MainPage(webapp2.RequestHandler):
 #        self.response.write('Hello, World!')
 class newUser(webapp2.RequestHandler):
     def get(self):
-        newtinydata()
-#        template = jinja_env.get_template('/templates/index.html')
-        self.response.headers['Content-Type'] = 'text/html'
-        self.response.write("HI")
-        file = TinyU.query().get()
-        self.response(file)
+        data()
+        file = models.TinyU.query(models.TinyU).get()
 
 #        self.response.headers['Content-Type'] = 'text/plain'
-
 
 
 app = webapp2.WSGIApplication([
