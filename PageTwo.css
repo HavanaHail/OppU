@@ -52,7 +52,7 @@ section {
   visibility: hidden;
   width: 400px;
   height: 400px;
-  background-color: #555;
+  background-color: 555;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -65,7 +65,7 @@ section {
 }
 
 
-/* Toggle this class - hide and show the popup */
+/* this hides/shows the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
@@ -77,7 +77,7 @@ section {
   opacity: 1;
   pointer-events: all;
 }
-/* Add animation (fade in the popup) */
+
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
