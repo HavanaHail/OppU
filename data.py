@@ -6,6 +6,8 @@ races = ["black", "hispanic", "white", "asian"]
 socialclass = ["Upper Class","Upper Middle Class", "Lower Middle Class", "Working Class"]
 grades = ["kindergarden", "1st", "2nd", "3rd"]
 
+
+
 # a way to be multiple races
 #first gen stuff!
 
@@ -17,7 +19,7 @@ def newtinydata():
     randname = random.choice(names)
     randsocialclass = random.choice(socialclass)
 
-    print("test")
+
     tinyperson = TinyU(age=5, race=randrace, name=randname, social_class=randsocialclass, is_current=True)
     #email="jarry.",
     tinyperson.put()

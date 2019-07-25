@@ -10,6 +10,7 @@ class TinyU(ndb.Model):
 #    email =  ndb.StringProperty()
     social_class =  ndb.StringProperty()
     is_current =  ndb.BooleanProperty()
+#    location = ndb.StringProperty()
 # first gen second gen stuff
 
 class lifeEvent():

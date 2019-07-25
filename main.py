@@ -24,7 +24,7 @@ class newUser(webapp2.RequestHandler):
         name = tinyperson.name
         age  = tinyperson.age
         race  = tinyperson.name
-        social_class = tinyperson.name
+        social_class = tinyperson.social_class
         user_grade = data.getGrade(tinyperson.age)
 
         template_vars = {
