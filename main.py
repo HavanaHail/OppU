@@ -23,7 +23,7 @@ class newUser(webapp2.RequestHandler):
 #        self.response.write("HI")
         name = tinyperson.name
         age  = tinyperson.age
-        race  = tinyperson.name
+        race  = tinyperson.race
         social_class = tinyperson.social_class
         user_grade = data.getGrade(tinyperson.age)
 
@@ -37,6 +37,9 @@ class newUser(webapp2.RequestHandler):
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
+
+        tinyperson_data = data.stats(tinyperson)
+        print tinyperson_data
 
 
 
