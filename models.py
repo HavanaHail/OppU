@@ -9,6 +9,7 @@ class TinyU(ndb.Model):
     grade = ndb.StringProperty()
 #    email =  ndb.StringProperty()
     social_class =  ndb.StringProperty()
+    ela_test_score = ndb.IntegerProperty()
     is_current =  ndb.BooleanProperty()
 #    location = ndb.StringProperty()
 # first gen second gen stuff
