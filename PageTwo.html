@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Your Life Path</title>
     <link rel="stylesheet" type="text/css" href="static/PageTwo.css"></link>
     <script src="static/PageTwo.js"></script>
@@ -19,24 +19,40 @@
       </section>
       <nav>
         <div class="border popup" onclick="myFunction()">About Student
-            <span class="popuptext" id="myPopup" >text goes in here</span>
-          </div>
+          <span class="popuptext" id="myPopup">text goes in here</span>
+          <a class="exit" href="#">&times;</a>
+        </div>
 
         <div class="border popup" onclick="myFunction()">About School
-            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+          <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        </div>
+        <div>
+    	    <a class="agebutton" href="#popup1">Age</a>
         </div>
 
-        <div class="border popup" onclick="myFunction()">+Age+
-            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
-        </div>
+    <div id="popup1" class="ageoverlay">
+    	<div class="agepopup">
 
-        <div class="border popup" onclick="myFunction()">Extracurriculars
-            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
-        </div>
+    		<h2>something will go in here</h2>
 
-        <div class="border popup" onclick="myFunction()">New Life
-            <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+    		<a class="close" href="#">&times;</a>
+    		<div class="content">
+    			Text goes here hehe
+          <p class="agebuttoncontainer">
+            <button type="agebutton" name="button">yes</button>
+            <button type="abebutton" name="button2">no</button>
+          </p>
         </div>
+      </div>
+    </div>
+
+    <div class="border popup" onclick="myFunction()">Extracurriculars
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+
+    <div class="border popup" onclick="myFunction()">New Life
+      <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+    </div>
 
       </nav>
       <section class="description">
