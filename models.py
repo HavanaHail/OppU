@@ -19,4 +19,4 @@ class lifeEvent():
     name =  ndb.StringProperty()
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
-    lifeEvents = ndb.StringProperty(repeated = True)
+    #lifeEvents = ndb.StringProperty(repeated = True)
