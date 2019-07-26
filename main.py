@@ -9,8 +9,6 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-
-
 class MainPage(webapp2.RequestHandler):
 
     def get(self):
