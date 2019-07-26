@@ -52,7 +52,7 @@ def ageUp(tinyperson):
     tinyperson.age += 1
     newAge = tinyperson.age
 
-    randschool = stats(tinyperson)
+    randschool = typeschool(tinyperson)
     newGrade = getGrade(newAge)
     return newAge,randschool,newGrade
 
@@ -63,12 +63,14 @@ def ageUp(tinyperson):
 
 def stats(tinyperson):
 
-#    School_choice = lifeEvent(shiftkey=0, name ="School Choice", description ="highschool process", forAge = 13)
+    School_choice = lifeEvent(shiftkey=0, name ="School Choice", description ="highschool process", forAge = 13)
+    return School_choice
     #, lifeEvents = [1,2,3]
 #    Private_school = lifeEvent(shiftkey=2, name ="", description = "", forAge = "", lifeEvent = "")
 #LOOK INTO HARRY POTTER TUPLES
 
 # if statmemnt for if age = life event ??
+def typeschool(tinyperson):
 #    if tinyperson.grade == School_choice.forAge:
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
         if tinyperson.social_class == "Low Income":

@@ -15,8 +15,8 @@ class MainPage(webapp2.RequestHandler):
 
     def get(self):
         tinyperson = data.newtinydata()
-        self.response.headers['Content-Type'] = 'text/html'
-#        self.response.write("HI")
+#        self.response.headers['Content-Type'] = 'text/html'
+
         name = tinyperson.name
         age  = tinyperson.age
         race  = tinyperson.race
@@ -30,10 +30,10 @@ class MainPage(webapp2.RequestHandler):
         "Social_Class": social_class,
         "Grade": user_grade
         }
-#    def post(self):
+
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
-
+ #  def post(self):
 
         newAge, randschool, newGrade = data.ageUp(tinyperson)
         print randschool
