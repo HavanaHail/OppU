@@ -116,10 +116,7 @@ section {
   visibility: hidden;
   opacity: 0;
 }
-.ageoverlay:target {
-  visibility: visible;
-  opacity: 1;
-}
+
 
 .agepopup {
   margin: 70px auto;
