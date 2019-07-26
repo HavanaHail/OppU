@@ -4,6 +4,7 @@ import random
 names = ["Bridget", "Jet", "Hailey", "Jen", "Luis"]
 races = ["Black", "Hispanic", "White", "Asian"]
 socialclass = ["Upper Class", "Middle Class", "Lower Class"]
+twoschools = ["Public School", "Private School"]
 typesOfSchoolsforLCBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
 # 70% Predom BH
 typesOfSchoolsforMCBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
@@ -23,6 +24,7 @@ typesOfSchoolsforMCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Pre
 typesOfSchoolsforUCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Predom A", "Predom A", "Predom A"]
 # 30% Predom A
 
+
 # a way to be multiple races
 #first gen stuff!
 
@@ -31,7 +33,7 @@ def newtinydata():
     randname = random.choice(names)
     randsocialclass = random.choice(socialclass)
 #    randTestscore = random.randint(1,4)
-    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6, is_current=True)
+    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6)
     return tinyperson
 
 def getGrade(age):
@@ -46,12 +48,6 @@ def getGrade(age):
         status = "highschool graduate"
         return newGrade
 
-    #email="jarry.",
-#    tinyperson.put()
-#    is_current = false
-#    return tinyperson
-
-
 #age up button
 def ageUp(tinyperson):
     pastAge = tinyperson.age
@@ -60,32 +56,25 @@ def ageUp(tinyperson):
 
     randschool = typeschool(tinyperson)
     newGrade = getGrade(newAge)
-    return newAge,randschool,newGrade
+    return newAge, randschool, newGrade
 
-
-
-
-
-
-def stats(tinyperson):
-
-    School_choice = lifeEvent(shiftkey=0, name ="School Choice", description ="highschool process", forAge = 13)
+def lifeEvent1(tinyperson):
+    School_choice = lifeEvent(title="School Choice", description="You are now applying for high school! You have the option of applying to either public school or private school. Which will you choose?", forAge=13)
     return School_choice
-    #, lifeEvents = [1,2,3]
-#    Private_school = lifeEvent(shiftkey=2, name ="", description = "", forAge = "", lifeEvent = "")
-#LOOK INTO HARRY POTTER TUPLES
 
-# if statmemnt for if age = life event ??
+def lifeEvent2(tinyperson):
+    College_readiness = lifeEvent(title="Standardized Testing", description="You now have to take the SAT to apply for college. Would you like to attend paid tutoring sessions to help prepare for the exam?", forAge=16)
+    return College_readiness
+
 def typeschool(tinyperson):
-#    if tinyperson.grade == School_choice.forAge:
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
         if tinyperson.social_class == "Lower Class":
             randschoolLCBH = random.choice(typesOfSchoolsforLCBH)
             return randschoolLCBH
-       elif tinyperson.social_class == "Middle Class":
+        elif tinyperson.social_class == "Middle Class":
             randschoolMCBH = random.choice(typesOfSchoolsforMCBH)
             return randschoolMCBH
-       elif tinyperson.social_class == "Upper Class":
+        elif tinyperson.social_class == "Upper Class":
             randschoolUCBH = random.choice(typesOfSchoolsforUCBH)
             return randschoolUCBH
     if tinyperson.race == "White":
@@ -94,39 +83,21 @@ def typeschool(tinyperson):
             return randschoolLCW
         elif tinyperson.social_class == "Middle Class":
             randschoolMCW = random.choice(typesOfSchoolsforMCW)
-            return randschoolLCW
+            return randschoolMCW
         elif tinyperson.social_class == "Upper Class":
             randschoolUCW = random.choice(typesOfSchoolsforUCW)
-            return randschoolLCW
+            return randschoolUCW
     if tinyperson.race == "Asian":
         if tinyperson.social_class == "Lower Class":
             randschoolLCA = random.choice(typesOfSchoolsforLCA)
             return randschoolLCA
         elif tinyperson.social_class == "Middle Class":
-            randschoolLCA = random.choice(typesOfSchoolsforMCA)
+            randschoolMCA = random.choice(typesOfSchoolsforMCA)
             return randschoolMCA
         elif tinyperson.social_class == "Upper Class":
-            randschoolLCA = random.choice(typesOfSchoolsforUCA)
+            randschoolUCA = random.choice(typesOfSchoolsforUCA)
             return randschoolUCA
 
-#    elif tinyperson.race == "White":
-#            if tinyperson.social_class == "Low Income":
-#                randschoolWA = random.choice(typesOfSchoolsforWA)
-#                return randschoolWA
-            #this is just so the console will shut up
-#            else:
-#              if tinyperson.social_class == "Middle Class":
-#                  randschoolWA = random.choice(typesOfSchoolsforWA)
-#            if tinyperson.social_class == "Upper Class":
-
-
-
-#    else tinyperson.race == "Asian":
-#                if tinyperson.social_class == "Lower Class":
-#                if tinyperson.social_class == "Middle Class":
-#                if tinyperson.social_class == "Upper Class":
-#        randschoolWA = random.choice(typesOfSchoolsforWA)
-#        return randschoolWA
 
 
 #age up button
