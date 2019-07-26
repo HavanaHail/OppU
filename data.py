@@ -4,6 +4,7 @@ import random
 names = ["Bridget", "Jet", "Hailey", "Jen", "Luis"]
 races = ["Black", "Hispanic", "White", "Asian"]
 socialclass = ["Upper Class", "Middle Class", "Lower Class"]
+twoschools = ["Public School", "Private School"]
 typesOfSchoolsforLCBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
 # 70% Predom BH
 typesOfSchoolsforMCBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
@@ -22,6 +23,7 @@ typesOfSchoolsforMCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Pre
 # 20% Predom A
 typesOfSchoolsforUCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Predom A", "Predom A", "Predom A"]
 # 30% Predom A
+
 
 # a way to be multiple races
 #first gen stuff!
@@ -60,22 +62,23 @@ def ageUp(tinyperson):
 
     randschool = typeschool(tinyperson)
     newGrade = getGrade(newAge)
-    return newAge,randschool,newGrade
+    return newAge, randschool, newGrade
 
-
-
-
-
-
-def stats(tinyperson):
-
-    School_choice = lifeEvent(shiftkey=0, name ="School Choice", description ="highschool process", forAge = 13)
+def lifeEvent1(tinyperson):
+    School_choice = lifeEvent(title="School Choice", description="You are now applying for high school! You have the option of applying to either public school or private school. Which will you choose?", forAge=13)
+    Public_school =
+    Private_school = 
     return School_choice
-    #, lifeEvents = [1,2,3]
-#    Private_school = lifeEvent(shiftkey=2, name ="", description = "", forAge = "", lifeEvent = "")
-#LOOK INTO HARRY POTTER TUPLES
+
+def lifeEvent2(tinyperson):
+    College_readiness = lifeEvent(title="Standardized Testing", description="You now have to take the SAT to apply for college. Would you like to attend paid tutoring sessions to help prepare for the exam?", forAge=16)
+
+    return College_readiness
 
 # if statmemnt for if age = life event ??
+
+def circumstances(tinyperson):
+
 def typeschool(tinyperson):
 #    if tinyperson.grade == School_choice.forAge:
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
@@ -109,24 +112,6 @@ def typeschool(tinyperson):
             randschoolLCA = random.choice(typesOfSchoolsforUCA)
             return randschoolUCA
 
-#    elif tinyperson.race == "White":
-#            if tinyperson.social_class == "Low Income":
-#                randschoolWA = random.choice(typesOfSchoolsforWA)
-#                return randschoolWA
-            #this is just so the console will shut up
-#            else:
-#              if tinyperson.social_class == "Middle Class":
-#                  randschoolWA = random.choice(typesOfSchoolsforWA)
-#            if tinyperson.social_class == "Upper Class":
-
-
-
-#    else tinyperson.race == "Asian":
-#                if tinyperson.social_class == "Lower Class":
-#                if tinyperson.social_class == "Middle Class":
-#                if tinyperson.social_class == "Upper Class":
-#        randschoolWA = random.choice(typesOfSchoolsforWA)
-#        return randschoolWA
 
 
 #age up button

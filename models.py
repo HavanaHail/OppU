@@ -17,8 +17,7 @@ class TinyU(ndb.Model):
 # first gen second gen stuff
 
 class lifeEvent():
-    shiftkey = ndb.IntegerProperty()
-    name =  ndb.StringProperty()
+    title =  ndb.StringProperty()
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
 
