@@ -10,9 +10,14 @@ jinja_env = jinja2.Environment(
     autoescape=True)
 
 
-class MainPage(webapp2.RequestHandler):
-    def __init__(self, response, request):
-        self.tinyperson = tinyperson = data.newtinydata();
+# class MainPage(webapp2.RequestHandler):
+#     def __init__(self, response, request):
+#         self.tinyperson = tinyperson = data.newtinydata();
+class MainPage((webapp2.RequestHandler)):
+    def __init__(self, request, response):
+#        self.tdict = {}
+        self.initialize(request, response)
+        self.tinyperson = data.newtinydata();
 
 
 
@@ -40,7 +45,7 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
 
 
-#        newAge, randschool, newGrade = data.ageUp(self.tinyperson)
+        newAge, randschool, newGrade = data.ageUp(self.tinyperson)
 
         print randschool
         print newAge

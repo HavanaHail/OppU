@@ -97,19 +97,19 @@ def typeschool(tinyperson):
             return randschoolLCW
         elif tinyperson.social_class == "Middle Class":
             randschoolMCW = random.choice(typesOfSchoolsforMCW)
-            return randschoolLCW
+            return randschoolMCW
         elif tinyperson.social_class == "Upper Class":
             randschoolUCW = random.choice(typesOfSchoolsforUCW)
-            return randschoolLCW
+            return randschoolUCW
     if tinyperson.race == "Asian":
         if tinyperson.social_class == "Lower Class":
             randschoolLCA = random.choice(typesOfSchoolsforLCA)
             return randschoolLCA
         elif tinyperson.social_class == "Middle Class":
-            randschoolLCA = random.choice(typesOfSchoolsforMCA)
+            randschoolMCA = random.choice(typesOfSchoolsforMCA)
             return randschoolMCA
         elif tinyperson.social_class == "Upper Class":
-            randschoolLCA = random.choice(typesOfSchoolsforUCA)
+            randschoolUCA = random.choice(typesOfSchoolsforUCA)
             return randschoolUCA
 
 
