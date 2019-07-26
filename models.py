@@ -10,7 +10,9 @@ class TinyU(ndb.Model):
 #    email =  ndb.StringProperty()
     social_class =  ndb.StringProperty()
     ela_test_score = ndb.IntegerProperty()
-    is_current =  ndb.BooleanProperty()
+    type_of_school =  ndb.StringProperty()
+
+    # is_current =  ndb.BooleanProperty()
 #    location = ndb.StringProperty()
 # first gen second gen stuff
 
@@ -19,4 +21,5 @@ class lifeEvent():
     name =  ndb.StringProperty()
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
-    #lifeEvents = ndb.StringProperty(repeated = True)
+
+class

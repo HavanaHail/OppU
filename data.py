@@ -3,20 +3,28 @@ import random
 
 names = ["Bridget", "Jet", "Hailey", "Jen", "Luis"]
 races = ["Black", "Hispanic", "White", "Asian"]
-socialclass = ["Upper Class", "Middle Class", "Low Income"]
-typesOfSchoolsforBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
-typesOfSchoolsforWA = ["Predom BH", "Not Predom", "Predom BH", "Not Predom", "Not Predom", "Predom BH", "Not Predom", "Not Predom", "Not Predom", "Not Predom"]
-
-
-
-
-
+socialclass = ["Upper Class", "Middle Class", "Lower Class"]
+typesOfSchoolsforLCBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
+# 70% Predom BH
+typesOfSchoolsforMCBH = ["Predom BH", "Not Predom", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Predom BH", "Not Predom", "Not Predom"]
+# 50% Predom BH
+typesOfSchoolsforUCBH = ["Predom BH", "Not Predom", "Predom BH", "Not Predom", "Not Predom", "Predom BH", "Not Predom", "Not Predom", "Not Predom", "Not Predom"]
+# 30% Predom BH
+typesOfSchoolsforLCW = ["Not Predom W", "Not Predom W", "Not Predom W", "Not Predom W", "Not Predom W", "Not Predom W", "Predom W", "Predom W", "Predom W", "Predom W"]
+# 40% Predom W
+typesOfSchoolsforMCW = ["Not Predom W", "Not Predom W", "Not Predom W", "Not Predom W", "Predom W", "Predom W", "Predom W", "Predom W", "Predom W", "Predom W"]
+# 60% Predom W
+typesOfSchoolsforUCW = ["Not Predom W", "Not Predom W", "Predom W", "Predom W", "Predom W", "Predom W", "Predom W", "Predom W", "Predom W", "Predom W"]
+# 80% Predom W
+typesOfSchoolsforLCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Predom A"]
+# 10% Predom A
+typesOfSchoolsforMCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Predom A", "Predom A"]
+# 20% Predom A
+typesOfSchoolsforUCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Not Predom A", "Predom A", "Predom A", "Predom A"]
+# 30% Predom A
 
 # a way to be multiple races
 #first gen stuff!
-
-
-
 
 def newtinydata():
     randrace = random.choice(races)
@@ -25,8 +33,6 @@ def newtinydata():
 #    randTestscore = random.randint(1,4)
     tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6, is_current=True)
     return tinyperson
-
-
 
 def getGrade(age):
 #matches age to grade
@@ -73,17 +79,35 @@ def stats(tinyperson):
 def typeschool(tinyperson):
 #    if tinyperson.grade == School_choice.forAge:
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
-        if tinyperson.social_class == "Low Income":
-            randschoolBH = random.choice(typesOfSchoolsforBH)
-            return randschoolBH
-                    #to shut up console
-        else:
-            print "Hi"
-    else:
-        print "hi"
-#            return randschoolBH
-#        if tinyperson.social_class == "Middle Class":
-#        if tinyperson.social_class == "Upper Class":
+        if tinyperson.social_class == "Lower Class":
+            randschoolLCBH = random.choice(typesOfSchoolsforLCBH)
+            return randschoolLCBH
+       elif tinyperson.social_class == "Middle Class":
+            randschoolMCBH = random.choice(typesOfSchoolsforMCBH)
+            return randschoolMCBH
+       elif tinyperson.social_class == "Upper Class":
+            randschoolUCBH = random.choice(typesOfSchoolsforUCBH)
+            return randschoolUCBH
+    if tinyperson.race == "White":
+        if tinyperson.social_class == "Lower Class":
+            randschoolLCW = random.choice(typesOfSchoolsforLCW)
+            return randschoolLCW
+        elif tinyperson.social_class == "Middle Class":
+            randschoolMCW = random.choice(typesOfSchoolsforMCW)
+            return randschoolLCW
+        elif tinyperson.social_class == "Upper Class":
+            randschoolUCW = random.choice(typesOfSchoolsforUCW)
+            return randschoolLCW
+    if tinyperson.race == "Asian":
+        if tinyperson.social_class == "Lower Class":
+            randschoolLCA = random.choice(typesOfSchoolsforLCA)
+            return randschoolLCA
+        elif tinyperson.social_class == "Middle Class":
+            randschoolLCA = random.choice(typesOfSchoolsforMCA)
+            return randschoolMCA
+        elif tinyperson.social_class == "Upper Class":
+            randschoolLCA = random.choice(typesOfSchoolsforUCA)
+            return randschoolUCA
 
 #    elif tinyperson.race == "White":
 #            if tinyperson.social_class == "Low Income":

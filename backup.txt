@@ -1,0 +1,65 @@
+HTML: 
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Your Life Path</title>
+    <link rel="stylesheet" type="text/css" href="static/PageTwo.css"></link>
+  </head>
+  <body>
+    <div class="TopBox">
+      <h1>Sprite here</h1>
+      <h1>{{ name }}</h1>
+      <h1>{{ grade }}</h1>
+    </div>
+    <main>
+      <section class="content">
+
+      </section>
+      <nav>
+        <div class="border"></div>
+          <a href="">About Student</a>
+        <div class="border"></div>
+          <a href="">About School</a>
+        <div class="border"></div>
+          <a href="">+Age+</a>
+        <div class="border"></div>
+          <a href="">Extracurriculars</a>
+        <div class="border"></div>
+          <a href="">New Life</a>
+      </nav>
+      <section class="description">
+          {{ age }}
+          {{ race }}
+          {{ socialclass }}
+      </section>
+    </main>
+
+  </body>
+</html>
+
+CSS: 
+
+.TopBox {
+  display: flex;
+  border: 2px solid black;
+  justify-content: space-evenly;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  background-color: darkblue;
+}
+
+section {
+  height: 350px;
+}
+
+.border {
+  border: 1px solid black;
+  padding-left: 126px;
+  padding-right: 126px;
+}  
