@@ -33,7 +33,7 @@ class MainPage(webapp2.RequestHandler):
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
- #  def post(self):
+    def post(self):
 
         newAge, randschool, newGrade = data.ageUp(tinyperson)
         print randschool
