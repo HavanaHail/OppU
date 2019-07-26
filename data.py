@@ -33,7 +33,7 @@ def newtinydata():
     randname = random.choice(names)
     randsocialclass = random.choice(socialclass)
 #    randTestscore = random.randint(1,4)
-    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6, is_current=True)
+    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6)
     return tinyperson
 
 def getGrade(age):
@@ -66,9 +66,9 @@ def ageUp(tinyperson):
 
 def lifeEvent1(tinyperson):
     School_choice = lifeEvent(title="School Choice", description="You are now applying for high school! You have the option of applying to either public school or private school. Which will you choose?", forAge=13)
-    Public_school =
-    Private_school = 
-    return School_choice
+    # Public_school =
+    # Private_school =
+    # return School_choice
 
 def lifeEvent2(tinyperson):
     College_readiness = lifeEvent(title="Standardized Testing", description="You now have to take the SAT to apply for college. Would you like to attend paid tutoring sessions to help prepare for the exam?", forAge=16)
@@ -77,18 +77,18 @@ def lifeEvent2(tinyperson):
 
 # if statmemnt for if age = life event ??
 
-def circumstances(tinyperson):
+#def circumstances(tinyperson):
 
-def typeschool(tinyperson):
 #    if tinyperson.grade == School_choice.forAge:
+def typeschool(tinyperson):
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
         if tinyperson.social_class == "Lower Class":
             randschoolLCBH = random.choice(typesOfSchoolsforLCBH)
             return randschoolLCBH
-       elif tinyperson.social_class == "Middle Class":
+        elif tinyperson.social_class == "Middle Class":
             randschoolMCBH = random.choice(typesOfSchoolsforMCBH)
             return randschoolMCBH
-       elif tinyperson.social_class == "Upper Class":
+        elif tinyperson.social_class == "Upper Class":
             randschoolUCBH = random.choice(typesOfSchoolsforUCBH)
             return randschoolUCBH
     if tinyperson.race == "White":

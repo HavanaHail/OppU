@@ -10,18 +10,21 @@ jinja_env = jinja2.Environment(
     autoescape=True)
 
 
-
 class MainPage(webapp2.RequestHandler):
+    def __init__(self, response, request):
+        self.tinyperson = tinyperson = data.newtinydata();
+
+
 
     def get(self):
-        tinyperson = data.newtinydata()
+
 #        self.response.headers['Content-Type'] = 'text/html'
 
-        name = tinyperson.name
-        age  = tinyperson.age
-        race  = tinyperson.race
-        social_class = tinyperson.social_class
-        user_grade = data.getGrade(tinyperson.age)
+        name = self.tinyperson.name
+        age  = self.tinyperson.age
+        race  = self.tinyperson.race
+        social_class = self.tinyperson.social_class
+        user_grade = data.getGrade(age)
 
         template_vars = {
         "Name": name,
@@ -33,11 +36,15 @@ class MainPage(webapp2.RequestHandler):
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
+
     def post(self):
 
-        newAge, randschool, newGrade = data.ageUp(tinyperson)
+
+#        newAge, randschool, newGrade = data.ageUp(self.tinyperson)
+
         print randschool
         print newAge
+        print randschool
 
 
 

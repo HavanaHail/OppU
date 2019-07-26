@@ -20,5 +20,3 @@ class lifeEvent():
     title =  ndb.StringProperty()
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
-
-class
