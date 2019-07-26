@@ -12,15 +12,11 @@ jinja_env = jinja2.Environment(
 
 
 class MainPage(webapp2.RequestHandler):
-    def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-#        self.response.write('Hello, World!')
-class newUser(webapp2.RequestHandler):
+
     def get(self):
         tinyperson = data.newtinydata()
-#        template = jinja_env.get_template('/templates/index.html')
-        self.response.headers['Content-Type'] = 'text/html'
-#        self.response.write("HI")
+#        self.response.headers['Content-Type'] = 'text/html'
+
         name = tinyperson.name
         age  = tinyperson.age
         race  = tinyperson.race
@@ -37,18 +33,16 @@ class newUser(webapp2.RequestHandler):
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
+ #  def post(self):
 
-        tinyperson_data = data.stats(tinyperson)
-        print tinyperson_data
+        newAge, randschool, newGrade = data.ageUp(tinyperson)
+        print randschool
+        print newAge
 
 
-
-
-#        self.response.headers['Content-Type'] = 'text/plain'
 
 
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage),
-    ('/newuser', newUser),
+    ('/', MainPage)
 ], debug=True)
