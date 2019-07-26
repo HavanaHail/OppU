@@ -33,7 +33,7 @@ def newtinydata():
     randname = random.choice(names)
     randsocialclass = random.choice(socialclass)
 #    randTestscore = random.randint(1,4)
-    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6, is_current=True)
+    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6)
     return tinyperson
 
 def getGrade(age):
@@ -67,15 +67,14 @@ def lifeEvent2(tinyperson):
     return College_readiness
 
 def typeschool(tinyperson):
-#    if tinyperson.grade == School_choice.forAge:
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
         if tinyperson.social_class == "Lower Class":
             randschoolLCBH = random.choice(typesOfSchoolsforLCBH)
             return randschoolLCBH
-       elif tinyperson.social_class == "Middle Class":
+        elif tinyperson.social_class == "Middle Class":
             randschoolMCBH = random.choice(typesOfSchoolsforMCBH)
             return randschoolMCBH
-       elif tinyperson.social_class == "Upper Class":
+        elif tinyperson.social_class == "Upper Class":
             randschoolUCBH = random.choice(typesOfSchoolsforUCBH)
             return randschoolUCBH
     if tinyperson.race == "White":
@@ -84,19 +83,19 @@ def typeschool(tinyperson):
             return randschoolLCW
         elif tinyperson.social_class == "Middle Class":
             randschoolMCW = random.choice(typesOfSchoolsforMCW)
-            return randschoolLCW
+            return randschoolMCW
         elif tinyperson.social_class == "Upper Class":
             randschoolUCW = random.choice(typesOfSchoolsforUCW)
-            return randschoolLCW
+            return randschoolUCW
     if tinyperson.race == "Asian":
         if tinyperson.social_class == "Lower Class":
             randschoolLCA = random.choice(typesOfSchoolsforLCA)
             return randschoolLCA
         elif tinyperson.social_class == "Middle Class":
-            randschoolLCA = random.choice(typesOfSchoolsforMCA)
+            randschoolMCA = random.choice(typesOfSchoolsforMCA)
             return randschoolMCA
         elif tinyperson.social_class == "Upper Class":
-            randschoolLCA = random.choice(typesOfSchoolsforUCA)
+            randschoolUCA = random.choice(typesOfSchoolsforUCA)
             return randschoolUCA
 
 
