@@ -27,7 +27,7 @@
           <span class="popuptext" id="myPopup" >A Simple Popup!</span>
         </div>
         <div>
-    	    <a class="agebutton" href="#popup1">Age</a>
+    	    <a class="agebutton" id="ageyearadder" href="#popup1" onclick="incrementAge()" >Age</a>
         </div>
 
     <div id="popup1" class="ageoverlay">
@@ -35,12 +35,12 @@
 
     		<h2>something will go in here</h2>
 
-    		<a class="close" href="#">&times;</a>
+    		<a class="close" id="closebutton" onclick="closePopUp()">&times;</a>
     		<div class="content">
     			Text goes here hehe
           <p class="agebuttoncontainer">
             <button type="agebutton" name="button">yes</button>
-            <button type="abebutton" name="button2">no</button>
+            <button type="agebutton" name="button2">no</button>
           </p>
         </div>
       </div>
