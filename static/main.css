@@ -1,0 +1,73 @@
+body {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .6em;
+  line-height: 1.3em;
+}
+body .heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+body .nav-main {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  box-shadow: 1px 1px 10px;
+}
+body .nav-main ul {
+  list-style-type: none;
+  background: #262626;
+  padding: 0px;
+  margin: 0px;
+}
+body .nav-main ul li svg {
+  color: #FAFAFA;
+  padding: .3em;
+  margin-left: .5em;
+}
+body .nav-main a {
+  color: #FAFAFA;
+  display: block;
+  padding: 2em 2.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body .nav-main a:hover {
+  background: #404040;
+}
+body .hero {
+  height: 20em;
+  width: 100%;
+  background-image: url("https://source.unsplash.com/89PFnHKg8HE");
+  background-size: cover;
+  box-shadow: 1px 1px 10px;
+}
+body .hero .masthead-wrap {
+  padding-top: 7em;
+}
+body .hero .masthead-wrap .title {
+  background-color: rgba(96, 87, 87, 0.8);
+  padding: 1em;
+  text-align: center;
+  color: #FAFAFA;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 500px) {
+  .nav-main ul {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+  }
+  .nav-main div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-main div li {
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  .nav-main div a {
+    color: #FAFAFA;
+  }
+}
