@@ -45,7 +45,7 @@ def getGrade(age):
         newGrade = str(num) + "th"
         return newGrade
     elif age >= 18:
-        status = "highschool graduate"
+        newGrade = "highschool graduate"
         return newGrade
 
 #age up button
