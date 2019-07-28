@@ -2,7 +2,7 @@ import webapp2
 import os
 import jinja2
 import data
-from models import TinyU
+from models import TinyU, lifeEvent
 #from data import newtinydata, getGrade, ageUp, lifeEvent1, lifeEvent2, typeschool
 
 jinja_env = jinja2.Environment(
@@ -27,23 +27,25 @@ class MainPage((webapp2.RequestHandler)):
         social_class = new_tinyperson.social_class
         user_grade = data.getGrade(age)
 
+        WordsForAge = "You are this old:"
         template_vars = {
         "Name": name,
         "Age": age,
         "race": race,
         "Social_Class": social_class,
-        "Grade": user_grade
+        "Grade": user_grade,
+        "WordsForAge": WordsForAge
         }
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
+vex = []
     def post(self):
 
 
         person = TinyU.query().get()
 #       person = TinyU.query(TinyU.is_current == True).get()
-
 
 
         name = person.name
@@ -52,17 +54,30 @@ class MainPage((webapp2.RequestHandler)):
         social_class = person.social_class
         user_grade = data.getGrade(age)
 
-
         newAge, randschool, newGrade = data.ageUp(person)
         person.put()
 
 
-        newAge, randschool, newGrade = data.ageUp(self.tinyperson)
+        newAge, randschool, newGrade = data.ageUp(tinyperson)
         # test
 #       print person
         print randschool
         print newAge
         print randschool
+
+        WordsForAge = "You are this old:"
+        template_vars = {
+        "Name": name,
+        "Age": newAge,
+        "race": race,
+        "Social_Class": social_class,
+        "Grade": new_Grade,
+        "WordsForAge": WordsForAge
+
+        }
+
+        start_template=jinja_env.get_template("PageTwo.html")
+        self.response.write(start_template.render(template_vars))
 
 
 

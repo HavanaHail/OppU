@@ -1,4 +1,5 @@
 from google.appengine.ext import ndb
+import main
 
 class TinyU(ndb.Model):
     age = ndb.IntegerProperty()
@@ -20,3 +21,7 @@ class lifeEvent():
     title =  ndb.StringProperty()
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
+
+def list_center(Words, Age):
+    sentence = str(Words + Age)
+    vex.append(sentence)
