@@ -3,32 +3,28 @@ import os
 import jinja2
 import data
 from models import TinyU
+#from data import newtinydata, getGrade, ageUp, lifeEvent1, lifeEvent2, typeschool
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-
-# class MainPage(webapp2.RequestHandler):
-#     def __init__(self, response, request):
-#         self.tinyperson = tinyperson = data.newtinydata();
 class MainPage((webapp2.RequestHandler)):
-    def __init__(self, request, response):
-#        self.tdict = {}
-        self.initialize(request, response)
-        self.tinyperson = data.newtinydata();
-
-
-
     def get(self):
+#                   NEW USER
+#       person = TinyU.query(TinyU.is_current == True).get()
+#        person.is_current = false
 
-#        self.response.headers['Content-Type'] = 'text/html'
+        new_tinyperson = data.newtinydata()
+#        new_tinyperson.is_current = True
+        new_tinyperson.put()
 
-        name = self.tinyperson.name
-        age  = self.tinyperson.age
-        race  = self.tinyperson.race
-        social_class = self.tinyperson.social_class
+
+        name = new_tinyperson.name
+        age  = new_tinyperson.age
+        race  = new_tinyperson.race
+        social_class = new_tinyperson.social_class
         user_grade = data.getGrade(age)
 
         template_vars = {
@@ -44,8 +40,11 @@ class MainPage((webapp2.RequestHandler)):
 
     def post(self):
 
-# = this was missing in your post luis !!!!
+
         person = TinyU.query().get()
+#       person = TinyU.query(TinyU.is_current == True).get()
+
+
 
         name = person.name
         age  = person.age
@@ -59,10 +58,12 @@ class MainPage((webapp2.RequestHandler)):
 
 
         newAge, randschool, newGrade = data.ageUp(self.tinyperson)
-
+        # test
+#       print person
         print randschool
         print newAge
         print randschool
+
 
 
 
