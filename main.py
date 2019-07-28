@@ -43,7 +43,22 @@ class MainPage((webapp2.RequestHandler)):
         self.response.write(start_template.render(template_vars))
 
     def post(self):
+<<<<<<< HEAD
 
+=======
+# = this was missing in your post luis
+        person = TinyU.query().get()
+
+        name = person.name
+        age  = person.age
+        race  = person.race
+        social_class = person.social_class
+        user_grade = data.getGrade(age)
+
+
+        newAge, randschool, newGrade = data.ageUp(person)
+        person.put()
+>>>>>>> e74b49596e6d64bba35dd761288ccc38bff433d7
 
         newAge, randschool, newGrade = data.ageUp(self.tinyperson)
 
