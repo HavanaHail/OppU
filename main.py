@@ -52,7 +52,7 @@ class MainPage((webapp2.RequestHandler)):
         print randschool
 
 
-
+ 
 
 
 app = webapp2.WSGIApplication([

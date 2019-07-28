@@ -25,8 +25,6 @@ typesOfSchoolsforUCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Pre
 # 30% Predom A
 
 
-# a way to be multiple races
-#first gen stuff!
 
 def newtinydata():
     randrace = random.choice(races)
