@@ -2,9 +2,6 @@ div.a {
   text-align: center;
 }
 
-body {
-  background-color: #fdf4e3;
-}
 
 .text {
   font-style: Archivo Narrow;
@@ -47,4 +44,14 @@ body .nav-main a {
 }
 body .nav-main a:hover {
   background: #404040;
+}
+
+h1 {
+  text-align: center;
+  margin: 250;
+}
+
+h2 {
+  text-align: center;
+  margin: 250;
 }

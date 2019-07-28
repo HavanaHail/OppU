@@ -39,12 +39,14 @@ body .nav-main a:hover {
 body .hero {
   height: 20em;
   width: 100%;
-  background-image: url("https://source.unsplash.com/89PFnHKg8HE");
+  background-attachment: "slideshow-container";
   background-size: cover;
   box-shadow: 1px 1px 10px;
+  text-align: center;
 }
 body .hero .masthead-wrap {
   padding-top: 7em;
+  text-align: center;
 }
 body .hero .masthead-wrap .title {
   background-color: rgba(96, 87, 87, 0.8);
@@ -52,6 +54,7 @@ body .hero .masthead-wrap .title {
   text-align: center;
   color: #FAFAFA;
   text-transform: uppercase;
+  align-items: center;
 }
 
 @media screen and (min-width: 500px) {
@@ -82,11 +85,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   align-items: center;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
+  margin-top: 100px;
 }
 
 /* Next & previous buttons */
@@ -171,13 +170,40 @@ img {vertical-align: middle;}
 }
 /* END OF HEADER */
 
+/* BEG OF ANIMATED COUNTER */
+.counter
+{
+    background-color: #eaecf0;
+    text-align: center;
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.counter-count
+{
+    font-size: 18px;
+    background-color: #00b3e7;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
 
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
+}
 
-/*
-font-size: .875em;
-line-height: 1.428em;
-letter-spacing: .15em;
-font-family: "Oak Bold",sans-serif;
-    font-weight: 700;
-    font-style: normal;
-/*  */
+/* END OF ANIMATED COUNTER */
