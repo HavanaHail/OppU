@@ -25,8 +25,6 @@ typesOfSchoolsforUCA = ["Not Predom A", "Not Predom A", "Not Predom A", "Not Pre
 # 30% Predom A
 
 
-# a way to be multiple races
-#first gen stuff!
 
 def newtinydata():
     randrace = random.choice(races)
@@ -45,7 +43,7 @@ def getGrade(age):
         newGrade = str(num) + "th"
         return newGrade
     elif age >= 18:
-        status = "highschool graduate"
+        newGrade = "highschool graduate"
         return newGrade
 
 #age up button

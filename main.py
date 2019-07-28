@@ -2,58 +2,83 @@ import webapp2
 import os
 import jinja2
 import data
-from models import TinyU
+from models import TinyU, lifeEvent
+#from data import newtinydata, getGrade, ageUp, lifeEvent1, lifeEvent2, typeschool
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-<<<<<<< HEAD
-class MainPage(webapp2.RequestHandler):
-=======
-
-# class MainPage(webapp2.RequestHandler):
-#     def __init__(self, response, request):
-#         self.tinyperson = tinyperson = data.newtinydata();
 class MainPage((webapp2.RequestHandler)):
-    def __init__(self, request, response):
-#        self.tdict = {}
-        self.initialize(request, response)
-        self.tinyperson = data.newtinydata();
-
-
->>>>>>> 4cd48b33f8f017c139705a7dd03ca263e1979c22
-
     def get(self):
+#                   NEW USER
+#       person = TinyU.query(TinyU.is_current == True).get()
+#        person.is_current = false
 
-#        self.response.headers['Content-Type'] = 'text/html'
+        new_tinyperson = data.newtinydata()
+#        new_tinyperson.is_current = True
+        new_tinyperson.put()
 
-        name = self.tinyperson.name
-        age  = self.tinyperson.age
-        race  = self.tinyperson.race
-        social_class = self.tinyperson.social_class
+
+        name = new_tinyperson.name
+        age  = new_tinyperson.age
+        race  = new_tinyperson.race
+        social_class = new_tinyperson.social_class
         user_grade = data.getGrade(age)
 
+        WordsForAge = "You are this old:"
         template_vars = {
         "Name": name,
         "Age": age,
         "race": race,
         "Social_Class": social_class,
-        "Grade": user_grade
+        "Grade": user_grade,
+        "WordsForAge": WordsForAge
         }
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
+vex = []
     def post(self):
 
 
-        newAge, randschool, newGrade = data.ageUp(self.tinyperson)
+        person = TinyU.query().get()
+#       person = TinyU.query(TinyU.is_current == True).get()
 
+
+        name = person.name
+        age  = person.age
+        race  = person.race
+        social_class = person.social_class
+        user_grade = data.getGrade(age)
+
+        newAge, randschool, newGrade = data.ageUp(person)
+        person.put()
+
+
+        newAge, randschool, newGrade = data.ageUp(tinyperson)
+        # test
+#       print person
         print randschool
         print newAge
         print randschool
+
+        WordsForAge = "You are this old:"
+        template_vars = {
+        "Name": name,
+        "Age": newAge,
+        "race": race,
+        "Social_Class": social_class,
+        "Grade": new_Grade,
+        "WordsForAge": WordsForAge
+
+        }
+
+        start_template=jinja_env.get_template("PageTwo.html")
+        self.response.write(start_template.render(template_vars))
+
 
 
 
