@@ -43,10 +43,8 @@ class MainPage((webapp2.RequestHandler)):
         self.response.write(start_template.render(template_vars))
 
     def post(self):
-<<<<<<< HEAD
 
-=======
-# = this was missing in your post luis
+# = this was missing in your post luis !!!!
         person = TinyU.query().get()
 
         name = person.name
@@ -58,7 +56,7 @@ class MainPage((webapp2.RequestHandler)):
 
         newAge, randschool, newGrade = data.ageUp(person)
         person.put()
->>>>>>> e74b49596e6d64bba35dd761288ccc38bff433d7
+
 
         newAge, randschool, newGrade = data.ageUp(self.tinyperson)
 
@@ -67,7 +65,7 @@ class MainPage((webapp2.RequestHandler)):
         print randschool
 
 
- 
+
 
 
 app = webapp2.WSGIApplication([
