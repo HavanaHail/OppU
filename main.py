@@ -34,7 +34,7 @@ class MainPage((webapp2.RequestHandler)):
         self.response.write(start_template.render(template_vars))
 
     def post(self):
-
+# = this was missing in your post luis
         person = TinyU.query().get()
 
         name = person.name
