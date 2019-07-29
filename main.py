@@ -51,16 +51,21 @@ class MainPage((webapp2.RequestHandler)):
 #       person = models.TinyU.query(models.TinyU.is_current == True).get()
 
 
-    def post(self):
 
-        newAge, randschool, newGrade, uniqueDescription = data.ageUp(self.tinyperson)
+
+        newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
         person.put()
-        newAge, randschool, newGrade = data.ageUp(person)
+
         # test
 #       print person
         print randschool
         print newAge
         print uniqueDescription
+
+        name = person.name
+        age  = newAge
+        race  = person.race
+        social_class = person.social_class
 
         WordsForAge = "You are this old:"
         # list_center(WordsForAge, newAge)
@@ -84,17 +89,8 @@ class MainPage((webapp2.RequestHandler)):
 
 
 
-
-
-
-        }
-
-
-        start_template=jinja_env.get_template("PageTwo.html")
-        self.response.write(start_template.render(template_vars))
-
 app = webapp2.WSGIApplication([
     ('/', MainPage)
 
-    ('/experienceit',PageTwo)
+#    ('/experienceit',PageTwo)
 ], debug=True)
