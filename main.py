@@ -76,9 +76,12 @@ class MainPage(webapp2.RequestHandler):
         "WordsForAge": WordsForAge,
         "school" : randschool,
         #"center_text": center_text
-
         }
 
+        life_event_vars = {
+        "Title": title,
+        "Description": description, 
+        }
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))

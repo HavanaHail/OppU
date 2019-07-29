@@ -49,6 +49,7 @@ def ageUp(tinyperson):
     pastAge = tinyperson.age
     tinyperson.age += 1
     newAge = tinyperson.age
+    print newAge
 
     randschool = typeschool(tinyperson)
     newGrade = getGrade(newAge)
@@ -58,7 +59,7 @@ def ageUp(tinyperson):
 
 def lifeEvent1(tinyperson):
     School_choice = lifeEvent(title="School Choice", description="You are now applying for high school! You have the option of applying to either public school or private school. Which will you choose?", forAge=13)
-    return School_choice
+    return School_choice, uniqueDescription
     print School_choice
 
 def lifeEvent2(tinyperson):
