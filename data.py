@@ -59,7 +59,7 @@ def ageUp(tinyperson):
 
 def lifeEvent1(tinyperson):
     School_choice = lifeEvent(title="School Choice", description="You are now applying for high school! You have the option of applying to either public school or private school. Which will you choose?", forAge=13)
-    return School_choice, uniqueDescription
+    return School_choice
     print School_choice
 
 def lifeEvent2(tinyperson):

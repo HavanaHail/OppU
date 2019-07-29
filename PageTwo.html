@@ -15,12 +15,12 @@
     </div>
     <main>
       <section class="content">
-        {{ lifeEvent1 }}
+        {{ lifeEvent1 }} {{ description }}
         {{ lifeEvent2 }}
       </section>
       <nav>
         <div class="border popup" onclick="myFunction()">About Student
-          <span class="popuptext" id="myPopup">text goes in here</span>
+          <span class="popuptext" id="myPopup">{{ description }}</span>
           <a class="exit" href="#">&times;</a>
         </div>
 

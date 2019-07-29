@@ -30,25 +30,36 @@ class MainPage(webapp2.RequestHandler):
         user_grade = data.getGrade(age)
 
         WordsForAge = "You are this old:"
+
+        description = data.descriptions(new_tinyperson)
+
         template_vars = {
         "Name": name,
         "Age": age,
         "race": race,
         "Social_Class": social_class,
         "Grade": user_grade,
-        "WordsForAge": WordsForAge
+        "WordsForAge": WordsForAge,
+        "Description": description,
+
+        
         }
+
+        # life_event_vars = {
+        # "Title": title,
+        # "Description": description,
+        # "forAge": forAge,
+        # }
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
+
+
 
     def post(self):
 
         person = models.TinyU.query().get()
 #       person = models.TinyU.query(models.TinyU.is_current == True).get()
-
-
-
 
         newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
         person.put()
@@ -64,6 +75,8 @@ class MainPage(webapp2.RequestHandler):
         race  = person.race
         social_class = person.social_class
 
+        schoolChoice = data.lifeEvent1(person)
+
         WordsForAge = "You are this old:"
         # list_center(WordsForAge, newAge)
 
@@ -75,12 +88,8 @@ class MainPage(webapp2.RequestHandler):
         "Grade": newGrade,
         "WordsForAge": WordsForAge,
         "school" : randschool,
+        "person": person,
         #"center_text": center_text
-        }
-
-        life_event_vars = {
-        "Title": title,
-        "Description": description, 
         }
 
         start_template=jinja_env.get_template("PageTwo.html")
