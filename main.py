@@ -10,7 +10,7 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class MainPage((webapp2.RequestHandler)):
+class MainPage(webapp2.RequestHandler):
     def get(self):
 #                   NEW USER
 #
@@ -85,8 +85,6 @@ class MainPage((webapp2.RequestHandler)):
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
-
-
 
 
 app = webapp2.WSGIApplication([
