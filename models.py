@@ -1,4 +1,5 @@
 from google.appengine.ext import ndb
+import main
 
 class TinyU(ndb.Model):
     age = ndb.IntegerProperty()
@@ -20,3 +21,11 @@ class lifeEvent():
     title =  ndb.StringProperty()
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
+
+center_text = []
+#class list_center()
+def list_center(Words, Age):
+    sentence = str(Words + Age)
+    center_text.append(sentence)
+    print center_text
+    return center_text

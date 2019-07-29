@@ -2,56 +2,77 @@ import webapp2
 import os
 import jinja2
 import data
-from models import TinyU
+import models
+#models.lifeEvent
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-
-# class MainPage(webapp2.RequestHandler):
-#     def __init__(self, response, request):
-#         self.tinyperson = tinyperson = data.newtinydata();
 class MainPage((webapp2.RequestHandler)):
-    def __init__(self, request, response):
-#        self.tdict = {}
-        self.initialize(request, response)
-        self.tinyperson = data.newtinydata();
-
-
-
     def get(self):
+#                   NEW USER
+#
+        # for x in range(0, 3):
+        #     person = models.TinyU.query(models.TinyU.is_current == True).get()
+        #     person.is_current = false
+        #     person.put()
 
-#        self.response.headers['Content-Type'] = 'text/html'
+        new_tinyperson = data.newtinydata()
+#        new_tinyperson.is_current = True
+        new_tinyperson.put()
 
-        name = self.tinyperson.name
-        age  = self.tinyperson.age
-        race  = self.tinyperson.race
-        social_class = self.tinyperson.social_class
+
+        name = new_tinyperson.name
+        age  = new_tinyperson.age
+        race  = new_tinyperson.race
+        social_class = new_tinyperson.social_class
         user_grade = data.getGrade(age)
 
+        WordsForAge = "You are this old:"
         template_vars = {
         "Name": name,
         "Age": age,
         "race": race,
         "Social_Class": social_class,
-        "Grade": user_grade
+        "Grade": user_grade,
+        "WordsForAge": WordsForAge
         }
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
+
     def post(self):
 
         newAge, randschool, newGrade, uniqueDescription = data.ageUp(self.tinyperson)
 
+        newAge, randschool, newGrade = data.ageUp(person)
+        # test
+#       print person
         print randschool
         print newAge
         print uniqueDescription
 
+        WordsForAge = "You are this old:"
+        # list_center(WordsForAge, newAge)
+
+        template_vars = {
+        "Name": name,
+        "Age": newAge,
+        "race": race,
+        "Social_Class": social_class,
+        "Grade": newGrade,
+        "WordsForAge": WordsForAge,
+        "school" : randschool,
+        #"center_text": center_text
+
+        }
 
 
+        start_template=jinja_env.get_template("PageTwo.html")
+        self.response.write(start_template.render(template_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainPage)
