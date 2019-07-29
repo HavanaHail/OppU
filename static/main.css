@@ -6,7 +6,7 @@ body {
 h1 .headertext {
   font-family: 'Lato', sans-serif;
   letter-spacing: .6em;
-  line-height: 1.3em;
+  line-height: 2.0em;
 }
 body .heading {
   text-transform: uppercase;
@@ -90,8 +90,9 @@ img {vertical-align: middle;}
   margin: auto;
   align-items: center;
   align-content: center;
-  margin-top: 70px;
+  margin-top: 100px;
   width: 100%
+  padding-top: 40px;
 }
 
 /* Next & previous buttons */
@@ -176,33 +177,28 @@ img {vertical-align: middle;}
    margin: 0;
    padding: 0;
    position: static;
+   font-size: 17 px;
  }
 
  section{
    top:0px;right:0px;bottom:0px;left:0px;
    height: 100%;
    width: 100%;
- /*  background-color:lime;*/
    padding-top:60px;
    border-bottom:1px dotted #D5D5D5;
    padding-bottom:40px;
-   background-color: #a3ad9c;
  }
 
  section .images{
    text-align:center;
-
-
  -webkit-transition: all 500ms ease;
  -moz-transition: all 500ms ease;
  -ms-transition: all 500ms ease;
  -o-transition: all 500ms ease;
  transition: all 500ms ease;
-
  }
 
  .maintext{
-
   font-family: 'Raleway', sans-serif;
   font-weight:200;
   margin: 0;
@@ -217,28 +213,29 @@ h2{
     font-weight:200;
   width:50%;
 }
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
  .images img{
-     width:auto;
-     padding: 20px
+     width:100%;
+     padding: 20px;
+
    }
 
+.imgq {
+  width: 600px;
+}
 
  .images img:hover{
  }
 
 
 
- .wrap{
-   max-width:760px;
-   margin:auto;
-   padding-left:5px;
-   padding-right:5px;
-
- }
-
-
  #hello{
-   padding-top:100px;
+   padding-top:10px;
    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
    margin-left:40px;
    border-bottom:0px dotted #D5D5D5;
@@ -246,6 +243,7 @@ h2{
 
  #hello h1{
      font-weight:400;
+
  }
 
  #hello p{
@@ -259,7 +257,10 @@ h2{
 
  }
 
-.bottom {
-  background-color: #a3ad9c;
+h4 {
+  font-family: 'Raleway', sans-serif;
+  color: #979896;
+  font-weight: 400;
+}
 }
 /* INTRO */
