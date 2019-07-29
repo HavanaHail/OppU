@@ -186,7 +186,7 @@ img {vertical-align: middle;}
    padding-top:60px;
    border-bottom:1px dotted #D5D5D5;
    padding-bottom:40px;
-
+   background-color: #a3ad9c;
  }
 
  section .images{
@@ -259,4 +259,7 @@ h2{
 
  }
 
+.bottom {
+  background-color: #a3ad9c;
+}
 /* INTRO */

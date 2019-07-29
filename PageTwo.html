@@ -20,7 +20,7 @@
       </section>
       <nav>
         <div class="border popup hover" onclick="StudentPopup()">About Student
-          <span class="popuptext" id="studentPopup"></span>
+          <span class="popuptext" id="studentPopup"> {{ Age }} {{ schoolChoice }} {{ race }} {{ Social_Class }}</span>
         </div>
 
         <div class="border popup hover" onclick="SchoolPopup()">About School
@@ -45,7 +45,7 @@
             </form>
 
             <form action="/" method="post">
-              <input type="submit" name="upvote" value="Upvote" />
+              <input type="submit" name="upvote" value="Age Up" />
             </form>
           </p>
         </div>
@@ -58,6 +58,9 @@
 
     <div class="border popup hover" onclick="NewLifePopup()">New Life
       <span class="popuptext" id="newLifePopup" ></span>
+      <form>
+        <button type="submit" action="/newuser" method="get">Restart</button>
+      </form>
     </div>
 
       </nav>
@@ -66,6 +69,8 @@
           {{ race }}
           {{ Social_Class }}
       </section>
+    <section class="bottom">
+    </section>
     </main>
   </body>
 </html>
