@@ -89,6 +89,10 @@ section {
   max-height: 30%;
   overflow: auto;
 
+#schoolPopup {
+  
+}
+
 .overlay.active {
   opacity: 1;
   pointer-events: all;

@@ -1,22 +1,22 @@
 let addyearcounter = 0;
 
-function myFunction() {
-  var popup = document.getElementById("myPopup");
+function SchoolPopup() {
+  var popup = document.getElementById("schoolPopup");
   popup.classList.toggle("show");
 
 }
-function myFunction() {
-  var popup = document.getElementById("myPopup");
+function StudentPopup() {
+  var popup = document.getElementById("studentPopup");
   popup.classList.toggle("show");
 
 }
-function myFunction() {
-  var popup = document.getElementById("myPopup");
+function ExtracurricularPopup() {
+  var popup = document.getElementById("extracurricularPopup");
   popup.classList.toggle("show");
 
 }
-function myFunction() {
-  var popup = document.getElementById("myPopup");
+function NewLifePopup() {
+  var popup = document.getElementById("newLifePopup");
   popup.classList.toggle("show");
 
 }
