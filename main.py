@@ -46,8 +46,15 @@ class MainPage((webapp2.RequestHandler)):
 
     def post(self):
 
-        newAge, randschool, newGrade, uniqueDescription = data.ageUp(self.tinyperson)
 
+        person = models.TinyU.query().get()
+#       person = models.TinyU.query(models.TinyU.is_current == True).get()
+
+
+    def post(self):
+
+        newAge, randschool, newGrade, uniqueDescription = data.ageUp(self.tinyperson)
+        person.put()
         newAge, randschool, newGrade = data.ageUp(person)
         # test
 #       print person
@@ -67,6 +74,18 @@ class MainPage((webapp2.RequestHandler)):
         "WordsForAge": WordsForAge,
         "school" : randschool,
         #"center_text": center_text
+
+        }
+
+
+        start_template=jinja_env.get_template("PageTwo.html")
+        self.response.write(start_template.render(template_vars))
+
+
+
+
+
+
 
         }
 
