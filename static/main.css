@@ -237,15 +237,6 @@ h2{
  }
 
 
- #large_image{
-   background-image: url('http://wallpaper.pickywallpapers.com/1280x1024/minimal-flying-paper-plane.jpg');
-   background-position:center center ;
-
-   min-height:400px;
-   width:100%;
-
- }
-
  #hello{
    padding-top:100px;
    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
