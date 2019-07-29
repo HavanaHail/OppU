@@ -101,7 +101,7 @@ class MainPage(webapp2.RequestHandler):
 
 class aboutushandler(webapp2.RequestHandler):
     def get(self):
-        start_template=jinja_env.get_template("aboutus.html")
+        start_template=jinja_env.get_template("aboutUs.html")
         self.response.write(start_template.render())
 
 
