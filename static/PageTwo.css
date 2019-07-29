@@ -26,6 +26,7 @@ section {
   padding: center;
   justify-content: space-evenly;
   display: flex;
+
 }
 
 .border:hover {
@@ -103,11 +104,11 @@ section {
   font-size: 16px;
   padding: 10px;
   color: #black;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
   transition .25s ease-in-out
+  style: inline;
+  position: static;
 }
 .agebutton:hover {
   background: #ccd7fa;
@@ -176,20 +177,24 @@ section {
   }
 }
 
-agebutton {
+/* .agebutton {
   width: 100px;
   height: 50px;
   background-color: yellow;
   border solid 3px #000;
   display inline-block;
-}
-agebutton:hover {
+} */
+/* .agebutton:hover {
   background: #9b870c;
-  transform translate3d(-5px,-5px,0);
+  transform translate3d(-5px,-5px,0); */
 
 }
 
 .buttoncontainer {
   margin-top: 20px;
 
+}
+
+.description {
+  background-color: #a3ad9c;
 }
