@@ -106,6 +106,7 @@ class aboutushandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
+
             ('/newuser', NewLife),
             ('/aboutus', aboutushandler),
             ('/', MainPage),
