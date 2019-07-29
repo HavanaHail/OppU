@@ -201,8 +201,8 @@ img {vertical-align: middle;}
  .maintext{
   font-family: 'Raleway', sans-serif;
   font-weight:200;
-  margin: 0;
   padding: 0;
+  margin-left: 40px;
 }
 
 h1{
@@ -212,6 +212,7 @@ h1{
 h2{
     font-weight:200;
   width:50%;
+  margin-left: 40px;
 }
 
 .images {
@@ -263,4 +264,8 @@ h4 {
   font-weight: 400;
 }
 }
-/* INTRO */
+
+p {
+  margin-left:40px;
+}
+/* INTRO */ 
