@@ -5,6 +5,21 @@ function myFunction() {
   popup.classList.toggle("show");
 
 }
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+
+}
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+
+}
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+
+}
 
 function incrementAge() {
   addyearcounter = addyearcounter+1
