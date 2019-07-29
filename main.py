@@ -14,7 +14,7 @@ jinja_env = jinja2.Environment(
 class NewLife(webapp2.RequestHandler):
     #                   NEW USER
     #
-    def post(self):
+    def get(self):
         list_of_people = models.TinyU.query(models.TinyU.is_current == True).fetch()
         for person in list_of_people:
             person.is_current = False
