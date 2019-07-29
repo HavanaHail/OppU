@@ -20,7 +20,7 @@
       </section>
       <nav>
         <div class="border popup hover" onclick="StudentPopup()">About Student
-          <span class="popuptext" id="studentPopup"></span>
+          <span class="popuptext" id="studentPopup"> {{ Age }} {{ schoolChoice }} {{ race }} {{ Social_Class }}</span>
         </div>
 
         <div class="border popup hover" onclick="SchoolPopup()">About School
@@ -58,6 +58,9 @@
 
     <div class="border popup hover" onclick="NewLifePopup()">New Life
       <span class="popuptext" id="newLifePopup" ></span>
+      <form>
+        <button type="submit" action="/newuser" method="get">Restart</button>
+      </form>
     </div>
 
       </nav>
