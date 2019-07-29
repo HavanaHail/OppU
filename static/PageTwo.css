@@ -56,6 +56,9 @@ section {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  align-items: center;
+  align-self: center;
+  display: flex;
 }
 
 /* The actual popup */
@@ -73,6 +76,9 @@ section {
   bottom: 125%;
   left: 50%;
   margin-left: -80px;
+  align-items: center;
+  align-self: center;
+  display: inline-block;
 }
 
 
@@ -81,12 +87,17 @@ section {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
+  align-items: center;
+  align-self: center;
+  display: inline-flex;
 }
 
 
 .overlay.active {
   opacity: 1;
   pointer-events: all;
+  align-items: center;
+  align-self: center;
 }
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
@@ -109,6 +120,9 @@ section {
   transition .25s ease-in-out
   style: inline;
   position: static;
+  align-items: center;
+  align-self: center;
+  display: flex;
 }
 .agebutton:hover {
   background: #ccd7fa;
@@ -175,19 +189,6 @@ section {
   .popup{
     width: 70%;
   }
-}
-
-/* .agebutton {
-  width: 100px;
-  height: 50px;
-  background-color: yellow;
-  border solid 3px #000;
-  display inline-block;
-} */
-/* .agebutton:hover {
-  background: #9b870c;
-  transform translate3d(-5px,-5px,0); */
-
 }
 
 .buttoncontainer {
