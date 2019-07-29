@@ -1,4 +1,4 @@
-HTML: 
+HTML:
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -39,7 +39,7 @@ HTML:
   </body>
 </html>
 
-CSS: 
+CSS:
 
 .TopBox {
   display: flex;
@@ -62,4 +62,4 @@ section {
   border: 1px solid black;
   padding-left: 126px;
   padding-right: 126px;
-}  
+}

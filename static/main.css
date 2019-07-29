@@ -1,0 +1,271 @@
+/* BEGINNING OF HEADER */
+body {
+  background-color: #e6ebeb
+}
+
+h1 .headertext {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .6em;
+  line-height: 1.3em;
+}
+body .heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+body .nav-main {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  box-shadow: 1px 1px 10px;
+}
+body .nav-main ul {
+  list-style-type: none;
+  background: #262626;
+  padding: 0px;
+  margin: 0px;
+}
+body .nav-main ul li svg {
+  color: #FAFAFA;
+  padding: .3em;
+  margin-left: .5em;
+}
+body .nav-main a {
+  color: #FAFAFA;
+  display: block;
+  padding: 2em 2.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body .nav-main a:hover {
+  background: #404040;
+}
+body .hero {
+  height: 20em;
+  width: 100%;
+  background-attachment: "slideshow-container";
+  background-size: cover;
+  box-shadow: 1px 1px 10px;
+  text-align: center;
+}
+body .hero .masthead-wrap {
+  padding-top: 7em;
+  text-align: center;
+}
+body .hero .masthead-wrap .title {
+  background-color: rgba(96, 87, 87, 0.8);
+  padding: 1em;
+  text-align: center;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+@media screen and (min-width: 500px) {
+  .nav-main ul {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+  }
+  .nav-main div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-main div li {
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  .nav-main div a {
+    color: #FAFAFA;
+  }
+}
+
+/* BEGINNING OF SLIDESHOW */
+* {box-sizing:border-box}
+img {vertical-align: middle;}
+/* Slideshow container */
+.slideshow-container {
+  height: 25%;
+  position: static;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  margin-top: 70px;
+  width: 100%
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* END OF HEADER */
+
+ /* INTRO */
+ body.textcontent {
+
+   font-family: 'Raleway', sans-serif;
+   font-weight:200;
+   margin: 0;
+   padding: 0;
+   position: static;
+ }
+
+ section{
+   top:0px;right:0px;bottom:0px;left:0px;
+   height: 100%;
+   width: 100%;
+ /*  background-color:lime;*/
+   padding-top:60px;
+   border-bottom:1px dotted #D5D5D5;
+   padding-bottom:40px;
+
+ }
+
+ section .images{
+   text-align:center;
+
+
+ -webkit-transition: all 500ms ease;
+ -moz-transition: all 500ms ease;
+ -ms-transition: all 500ms ease;
+ -o-transition: all 500ms ease;
+ transition: all 500ms ease;
+
+ }
+
+ .maintext{
+
+  font-family: 'Raleway', sans-serif;
+  font-weight:200;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+    font-weight:200;
+}
+
+h2{
+    font-weight:200;
+  width:50%;
+}
+ .images img{
+     width:auto;
+
+   }
+
+
+ .images img:hover{
+ }
+
+
+
+ .wrap{
+   max-width:760px;
+   margin:auto;
+   padding-left:5px;
+   padding-right:5px;
+
+ }
+
+
+ #large_image{
+   background-image: url('http://wallpaper.pickywallpapers.com/1280x1024/minimal-flying-paper-plane.jpg');
+   background-position:center center ;
+
+   min-height:400px;
+   width:100%;
+
+ }
+
+ #hello{
+   padding-top:100px;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+   margin-left:40px;
+   border-bottom:0px dotted #D5D5D5;
+ }
+
+ #hello h1{
+     font-weight:400;
+ }
+
+ #hello p{
+   width:50%;
+     font-weight:400;
+ }
+
+
+ .white{
+   color:white;
+
+ }
+
+/* INTRO */
