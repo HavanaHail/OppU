@@ -10,53 +10,56 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+
 class NewLife(webapp2.RequestHandler):
     #                   NEW USER
     #
-            list_of_people = models.TinyU.query(models.TinyU.is_current == True).fetch()
-            for person in list_of_people:
-                person.is_current = False
-                person.put()
+    def post(self):
+        list_of_people = models.TinyU.query(models.TinyU.is_current == True).fetch()
+        for person in list_of_people:
+            person.is_current = False
+            person.put()
 
-            new_tinyperson = data.newtinydata()
-            new_tinyperson.is_current = True
-            new_tinyperson.put()
+        new_tinyperson = data.newtinydata()
+        new_tinyperson.is_current = True
+        new_tinyperson.put()
 
-            name = new_tinyperson.name
-            age = new_tinyperson.age
-            race = new_tinyperson.race
-            social_class = new_tinyperson.social_class
-            user_grade = data.getGrade(age)
+        name = new_tinyperson.name
+        age = new_tinyperson.age
+        race = new_tinyperson.race
+        social_class = new_tinyperson.social_class
+        user_grade = data.getGrade(age)
 
-            WordsForAge = "You are this old:"
+        WordsForAge = "You are this old:"
 
-            description = data.descriptions(new_tinyperson)
+        description = data.descriptions(new_tinyperson)
 
-            template_vars = {
-            "Name": name,
-            "Age": age,
-            "race": race,
-            "Social_Class": social_class,
-            "Grade": user_grade,
-            "WordsForAge": WordsForAge,
-            "Description": description,
+        template_vars = {
+        "Name": name,
+        "Age": age,
+        "race": race,
+        "Social_Class": social_class,
+        "Grade": user_grade,
+        "WordsForAge": WordsForAge,
+        "Description": description,
 
 
-            }
+        }
 
-            # life_event_vars = {
-            # "Title": title,
-            # "Description": description,
-            # "forAge": forAge,
-            # }
+        # life_event_vars = {
+        # "Title": title,
+        # "Description": description,
+        # "forAge": forAge,
+        # }
 
-            start_template=jinja_env.get_template("PageTwo.html")
-            self.response.write(start_template.render(template_vars))
+        start_template=jinja_env.get_template("PageTwo.html")
+        self.response.write(start_template.render(template_vars))
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
         start_template=jinja_env.get_template("main.html")
         self.response.write(start_template.render())
+
 
     def post(self):
 
@@ -103,9 +106,9 @@ class aboutushandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/newuser', NewLife),
-    ('/aboutus', aboutushandler),
-    ('/', MainPage),
+            ('/newuser', NewLife),
+            ('/aboutus', aboutushandler),
+            ('/', MainPage),
 
 #    ('/experienceit',PageTwo)
 ], debug=True)
