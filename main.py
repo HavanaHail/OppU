@@ -2,8 +2,8 @@ import webapp2
 import os
 import jinja2
 import data
-from models import TinyU, lifeEvent
-#from data import newtinydata, getGrade, ageUp, lifeEvent1, lifeEvent2, typeschool
+import models
+#models.lifeEvent
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -13,8 +13,11 @@ jinja_env = jinja2.Environment(
 class MainPage((webapp2.RequestHandler)):
     def get(self):
 #                   NEW USER
-#       person = TinyU.query(TinyU.is_current == True).get()
-#        person.is_current = false
+#
+        # for x in range(0, 3):
+        #     person = models.TinyU.query(models.TinyU.is_current == True).get()
+        #     person.is_current = false
+        #     person.put()
 
         new_tinyperson = data.newtinydata()
 #        new_tinyperson.is_current = True
@@ -40,12 +43,12 @@ class MainPage((webapp2.RequestHandler)):
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
-vex = []
+
     def post(self):
 
 
-        person = TinyU.query().get()
-#       person = TinyU.query(TinyU.is_current == True).get()
+        person = models.TinyU.query().get()
+#       person = models.TinyU.query(models.TinyU.is_current == True).get()
 
 
         name = person.name
@@ -58,7 +61,7 @@ vex = []
         person.put()
 
 
-        newAge, randschool, newGrade = data.ageUp(tinyperson)
+        newAge, randschool, newGrade = data.ageUp(person)
         # test
 #       print person
         print randschool
@@ -66,18 +69,25 @@ vex = []
         print randschool
 
         WordsForAge = "You are this old:"
+        # list_center(WordsForAge, newAge)
+
         template_vars = {
         "Name": name,
         "Age": newAge,
         "race": race,
         "Social_Class": social_class,
-        "Grade": new_Grade,
-        "WordsForAge": WordsForAge
+        "Grade": newGrade,
+        "WordsForAge": WordsForAge,
+        "school" : randschool,
+        #"center_text": center_text
 
         }
 
+
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
+
+
 
 
 

@@ -1,6 +1,7 @@
 from google.appengine.ext import ndb
 import main
 
+
 class TinyU(ndb.Model):
     age = ndb.IntegerProperty()
 #grade would be a math equation
@@ -22,6 +23,10 @@ class lifeEvent():
     description = ndb.TextProperty()
     forAge = ndb.IntegerProperty()
 
+center_text = []
+#class list_center()
 def list_center(Words, Age):
     sentence = str(Words + Age)
-    vex.append(sentence)
+    center_text.append(sentence)
+    print center_text
+    return center_text
