@@ -47,20 +47,12 @@ class MainPage(webapp2.RequestHandler):
         person = models.TinyU.query().get()
 #       person = models.TinyU.query(models.TinyU.is_current == True).get()
 
-<<<<<<< HEAD
-    def post(self):
-=======
 
->>>>>>> 1d5593fc3c3d0cbdcb400995d58b36c4220e1fb1
 
 
         newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
         person.put()
-<<<<<<< HEAD
-        newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
-=======
 
->>>>>>> 1d5593fc3c3d0cbdcb400995d58b36c4220e1fb1
         # test
 #       print person
         print randschool
@@ -91,17 +83,9 @@ class MainPage(webapp2.RequestHandler):
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
-<<<<<<< HEAD
-        # start_template=jinja_env.get_template("PageTwo.html")
-        # self.response.write(start_template.render(template_vars))
-
-app = webapp2.WSGIApplication([
-    ('/', MainPage)
-=======
 
 app = webapp2.WSGIApplication([
     ('/', MainPage)
 
 #    ('/experienceit',PageTwo)
->>>>>>> 1d5593fc3c3d0cbdcb400995d58b36c4220e1fb1
 ], debug=True)
