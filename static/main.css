@@ -1,5 +1,9 @@
 /* BEGINNING OF HEADER */
 body {
+  background-color: #e6ebeb
+}
+
+h1 .headertext {
   font-family: 'Lato', sans-serif;
   letter-spacing: .6em;
   line-height: 1.3em;
@@ -81,11 +85,13 @@ body .hero .masthead-wrap .title {
 img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
+  height: 25%;
+  position: static;
   margin: auto;
   align-items: center;
-  margin-top: 100px;
+  align-content: center;
+  margin-top: 70px;
+  width: 100%
 }
 
 /* Next & previous buttons */
@@ -120,20 +126,12 @@ img {vertical-align: middle;}
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   bottom: 8px;
   width: 100%;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -170,40 +168,104 @@ img {vertical-align: middle;}
 }
 /* END OF HEADER */
 
-/* BEG OF ANIMATED COUNTER */
-.counter
-{
-    background-color: #eaecf0;
-    text-align: center;
-}
-.employees,.customer,.design,.order
-{
-    margin-top: 70px;
-    margin-bottom: 70px;
-}
-.counter-count
-{
-    font-size: 18px;
-    background-color: #00b3e7;
-    border-radius: 50%;
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    line-height: 92px;
-    width: 92px;
-    height: 92px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    display: inline-block;
+ /* INTRO */
+ body.textcontent {
+
+   font-family: 'Raleway', sans-serif;
+   font-weight:200;
+   margin: 0;
+   padding: 0;
+   position: static;
+ }
+
+ section{
+   top:0px;right:0px;bottom:0px;left:0px;
+   height: 100%;
+   width: 100%;
+ /*  background-color:lime;*/
+   padding-top:60px;
+   border-bottom:1px dotted #D5D5D5;
+   padding-bottom:40px;
+
+ }
+
+ section .images{
+   text-align:center;
+
+
+ -webkit-transition: all 500ms ease;
+ -moz-transition: all 500ms ease;
+ -ms-transition: all 500ms ease;
+ -o-transition: all 500ms ease;
+ transition: all 500ms ease;
+
+ }
+
+ .maintext{
+
+  font-family: 'Raleway', sans-serif;
+  font-weight:200;
+  margin: 0;
+  padding: 0;
 }
 
-.employee-p,.customer-p,.order-p,.design-p
-{
-    font-size: 24px;
-    color: #000000;
-    line-height: 34px;
+h1{
+    font-weight:200;
 }
 
-/* END OF ANIMATED COUNTER */
+h2{
+    font-weight:200;
+  width:50%;
+}
+ .images img{
+     width:auto;
+
+   }
+
+
+ .images img:hover{
+ }
+
+
+
+ .wrap{
+   max-width:760px;
+   margin:auto;
+   padding-left:5px;
+   padding-right:5px;
+
+ }
+
+
+ #large_image{
+   background-image: url('http://wallpaper.pickywallpapers.com/1280x1024/minimal-flying-paper-plane.jpg');
+   background-position:center center ;
+
+   min-height:400px;
+   width:100%;
+
+ }
+
+ #hello{
+   padding-top:100px;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+   margin-left:40px;
+   border-bottom:0px dotted #D5D5D5;
+ }
+
+ #hello h1{
+     font-weight:400;
+ }
+
+ #hello p{
+   width:50%;
+     font-weight:400;
+ }
+
+
+ .white{
+   color:white;
+
+ }
+
+/* INTRO */
