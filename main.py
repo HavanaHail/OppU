@@ -32,6 +32,7 @@ class MainPage(webapp2.RequestHandler):
         WordsForAge = "You are this old:"
 
         description = data.descriptions(new_tinyperson)
+        extracurricular = data.extracurriculars(new_tinyperson)
 
         template_vars = {
         "Name": name,
@@ -41,8 +42,7 @@ class MainPage(webapp2.RequestHandler):
         "Grade": user_grade,
         "WordsForAge": WordsForAge,
         "Description": description,
-
-
+        "Extracurricular": extracurricular,
         }
 
         # life_event_vars = {
@@ -76,7 +76,7 @@ class MainPage(webapp2.RequestHandler):
 
         schoolChoice = data.lifeEvent1(person)
 
-        WordsForAge = "You are this old:"
+        WordsForAge = "You are currently this old:"
         # list_center(WordsForAge, newAge)
 
         template_vars = {

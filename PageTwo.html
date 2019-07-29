@@ -19,12 +19,12 @@
         {{ lifeEvent2 }}
       </section>
       <nav>
-        <div class="border popup hover" onclick="myFunction()">About Student
-          <span class="popuptext" id="myPopup">text goes in here</span>
+        <div class="border popup hover" onclick="StudentPopup()">About Student
+          <span class="popuptext" id="studentPopup"></span>
         </div>
 
-        <div class="border popup hover" onclick="myFunction()">About School
-          <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+        <div class="border popup hover" onclick="SchoolPopup()">About School
+          <span class="popuptext" id="schoolPopup" >{{ Description }}</span>
         </div>
         <div>
     	    <a class="agebutton hover" id="ageyearadder" href="#popup1" onclick="incrementAge()" >Age</a>
@@ -33,7 +33,7 @@
     <div id="popup1" class="ageoverlay">
     	<div class="agepopup">
 
-    		<h2>something will go in here</h2>
+    		<h2>{{ WordsForAge }} {{ Age }}</h2>
 
     		<a class="close" id="closebutton" onclick="closePopUp()">&times;</a>
     		<div class="content">
@@ -41,7 +41,7 @@
           <p class="agebuttoncontainer">
 
             <form action="/" method="post">
-              <input type="submit" name="yes" value="Upvote" />
+              <input type="submit" name="yes" value="Age Up" />
             </form>
 
             <form action="/" method="post">
@@ -52,12 +52,12 @@
       </div>
     </div>
 
-    <div class="border popup hover" onclick="myFunction()">Extracurriculars
-      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    <div class="border popup hover" onclick="ExtracurricularPopup()">Extracurriculars
+      <span class="popuptext" id="extracurricularPopup">{{ Extracurricular }}</span>
     </div>
 
-    <div class="border popup hover" onclick="myFunction()">New Life
-      <span class="popuptext" id="myPopup" >A Simple Popup!</span>
+    <div class="border popup hover" onclick="NewLifePopup()">New Life
+      <span class="popuptext" id="newLifePopup" ></span>
     </div>
 
       </nav>

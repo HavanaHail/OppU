@@ -1,7 +1,22 @@
 let addyearcounter = 0;
 
-function myFunction() {
-  var popup = document.getElementById("myPopup");
+function SchoolPopup() {
+  var popup = document.getElementById("schoolPopup");
+  popup.classList.toggle("show");
+
+}
+function StudentPopup() {
+  var popup = document.getElementById("studentPopup");
+  popup.classList.toggle("show");
+
+}
+function ExtracurricularPopup() {
+  var popup = document.getElementById("extracurricularPopup");
+  popup.classList.toggle("show");
+
+}
+function NewLifePopup() {
+  var popup = document.getElementById("newLifePopup");
   popup.classList.toggle("show");
 
 }
