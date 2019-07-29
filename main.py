@@ -14,44 +14,51 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
 #                   NEW USER
 #
-        # for x in range(0, 3):
-        #     person = models.TinyU.query(models.TinyU.is_current == True).get()
-        #     person.is_current = false
-        #     person.put()
+        list_of_people = models.TinyU.query(models.TinyU.is_current == True).fetch()
+        for person in list_of_people:
+            person.is_current = False
+            person.put()
 
         new_tinyperson = data.newtinydata()
-#        new_tinyperson.is_current = True
+        new_tinyperson.is_current = True
         new_tinyperson.put()
 
-
         name = new_tinyperson.name
-        age  = new_tinyperson.age
-        race  = new_tinyperson.race
+        age = new_tinyperson.age
+        race = new_tinyperson.race
         social_class = new_tinyperson.social_class
         user_grade = data.getGrade(age)
 
         WordsForAge = "You are this old:"
+
+        description = data.descriptions(new_tinyperson)
+
         template_vars = {
         "Name": name,
         "Age": age,
         "race": race,
         "Social_Class": social_class,
         "Grade": user_grade,
-        "WordsForAge": WordsForAge
+        "WordsForAge": WordsForAge,
+        "Description": description,
+
+
         }
+
+        # life_event_vars = {
+        # "Title": title,
+        # "Description": description,
+        # "forAge": forAge,
+        # }
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
 
+
     def post(self):
 
-
-        person = models.TinyU.query().get()
-#       person = models.TinyU.query(models.TinyU.is_current == True).get()
-
-
-
+        person = models.TinyU.query(models.TinyU.is_current == True).get()
 
         newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
         person.put()
@@ -67,6 +74,8 @@ class MainPage(webapp2.RequestHandler):
         race  = person.race
         social_class = person.social_class
 
+        schoolChoice = data.lifeEvent1(person)
+
         WordsForAge = "You are this old:"
         # list_center(WordsForAge, newAge)
 
@@ -78,10 +87,9 @@ class MainPage(webapp2.RequestHandler):
         "Grade": newGrade,
         "WordsForAge": WordsForAge,
         "school" : randschool,
+        "person": person,
         #"center_text": center_text
-
         }
-
 
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
