@@ -12,8 +12,7 @@ class TinyU(ndb.Model):
     social_class =  ndb.StringProperty()
     ela_test_score = ndb.IntegerProperty()
     type_of_school =  ndb.StringProperty()
-
-    # is_current =  ndb.BooleanProperty()
+    is_current =  ndb.BooleanProperty()
 #    location = ndb.StringProperty()
 # first gen second gen stuff
 

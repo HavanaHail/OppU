@@ -29,7 +29,7 @@ def newtinydata():
     randname = random.choice(names)
     randsocialclass = random.choice(socialclass)
 #    randTestscore = random.randint(1,4)
-    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6)
+    tinyperson = TinyU(age=11, race=randrace, name=randname, social_class=randsocialclass, ela_test_score=6, is_current=False)
     return tinyperson
 
 def getGrade(age):

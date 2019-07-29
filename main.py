@@ -14,13 +14,13 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
 #                   NEW USER
 #
-        # for x in range(0, 3):
-        #     person = models.TinyU.query(models.TinyU.is_current == True).get()
-        #     person.is_current = false
-        #     person.put()
+        list_of_people = models.TinyU.query(models.TinyU.is_current == True).fetch()
+        for person in list_of_people:
+            person.is_current = False
+            person.put()
 
         new_tinyperson = data.newtinydata()
-#        new_tinyperson.is_current = True
+        new_tinyperson.is_current = True
         new_tinyperson.put()
 
         name = new_tinyperson.name
@@ -42,7 +42,7 @@ class MainPage(webapp2.RequestHandler):
         "WordsForAge": WordsForAge,
         "Description": description,
 
-        
+
         }
 
         # life_event_vars = {
@@ -58,8 +58,7 @@ class MainPage(webapp2.RequestHandler):
 
     def post(self):
 
-        person = models.TinyU.query().get()
-#       person = models.TinyU.query(models.TinyU.is_current == True).get()
+        person = models.TinyU.query(models.TinyU.is_current == True).get()
 
         newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
         person.put()
