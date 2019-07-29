@@ -23,10 +23,9 @@ class MainPage(webapp2.RequestHandler):
 #        new_tinyperson.is_current = True
         new_tinyperson.put()
 
-
         name = new_tinyperson.name
-        age  = new_tinyperson.age
-        race  = new_tinyperson.race
+        age = new_tinyperson.age
+        race = new_tinyperson.race
         social_class = new_tinyperson.social_class
         user_grade = data.getGrade(age)
 
@@ -43,19 +42,16 @@ class MainPage(webapp2.RequestHandler):
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
-
     def post(self):
-
 
         person = models.TinyU.query().get()
 #       person = models.TinyU.query(models.TinyU.is_current == True).get()
-
 
     def post(self):
 
         newAge, randschool, newGrade, uniqueDescription = data.ageUp(self.tinyperson)
         person.put()
-        newAge, randschool, newGrade = data.ageUp(person)
+        newAge, randschool, newGrade, uniqueDescription = data.ageUp(person)
         # test
 #       print person
         print randschool
@@ -81,11 +77,9 @@ class MainPage(webapp2.RequestHandler):
         start_template=jinja_env.get_template("PageTwo.html")
         self.response.write(start_template.render(template_vars))
 
-        start_template=jinja_env.get_template("PageTwo.html")
-        self.response.write(start_template.render(template_vars))
+        # start_template=jinja_env.get_template("PageTwo.html")
+        # self.response.write(start_template.render(template_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainPage)
-
-    ('/experienceit',PageTwo)
 ], debug=True)

@@ -59,10 +59,12 @@ def ageUp(tinyperson):
 def lifeEvent1(tinyperson):
     School_choice = lifeEvent(title="School Choice", description="You are now applying for high school! You have the option of applying to either public school or private school. Which will you choose?", forAge=13)
     return School_choice
+    print School_choice
 
 def lifeEvent2(tinyperson):
     College_readiness = lifeEvent(title="Standardized Testing", description="You now have to take the SAT to apply for college. Would you like to attend paid tutoring sessions to help prepare for the exam?", forAge=16)
     return College_readiness
+    print College_readiness
 
 def typeschool(tinyperson):
     if tinyperson.race == "Black" or tinyperson.race == "Hispanic":
